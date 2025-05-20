@@ -142,5 +142,17 @@ namespace TP7_Programacion
                 lvSucursales.DataBind();
             }
         }
+
+        protected void lvSucursales_PagePropertiesChanging(object sender, PagePropertiesChangingEventArgs e)
+        {
+            DataPager dataPager = (DataPager)lvSucursales.FindControl("DataPager1");
+            if (dataPager != null)
+            {
+                dataPager.SetPageProperties(e.StartRowIndex, e.MaximumRows, false);
+            }
+
+            CargarListView();
+        }
+
     }
 }

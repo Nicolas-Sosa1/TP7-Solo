@@ -32,7 +32,7 @@
                 </ItemTemplate>
             </asp:DataList>
             <br />
-            <asp:ListView ID="lvSucursales" runat="server" GroupItemCount="3">
+            <asp:ListView ID="lvSucursales" runat="server" GroupItemCount="3" OnPagePropertiesChanging="lvSucursales_PagePropertiesChanging">
                 
                 <EditItemTemplate>
                     <td runat="server" style="background-color: #999999;">NombreSucursal:
